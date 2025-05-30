@@ -96,6 +96,20 @@
     background-color: var(--primary-color);
     color: var(--white);
   }
+
+  .btn-outline-secondary{
+    border: 2px solid var(--primary-color); /* Borde más grueso */
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 50px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
   
   .badge {
     font-size: 0.8rem;
@@ -189,6 +203,10 @@
     border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top{
+    width: 25%;
   }
 
   .item-detail-card .card-title {
