@@ -105,3 +105,48 @@ VITE_FIREBASE_APP_ID=
 3.  **Asegúrate de que `.env` esté listado en tu archivo `.gitignore`**. Esto previene que se suba accidentalmente al repositorio.
 
 ## Cómo Levantar el Proyecto
+
+Para configurar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
+
+1.  **Clonar el Repositorio:**
+    Abre tu terminal o consola y clona el repositorio en tu máquina local usando HTTPS o SSH (reemplaza `tu-usuario/tu-repositorio.git` con la URL real de tu repositorio):
+
+    ```bash
+    git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+    ```
+
+    Luego, navega al directorio del proyecto:
+
+    ```bash
+    cd tu-repositorio
+    ```
+
+2.  **Instalar Dependencias:**
+    Este proyecto utiliza `npm` (Node Package Manager) para gestionar las dependencias. Ejecuta el siguiente comando en la raíz del proyecto para instalar todas las librerías necesarias definidas en el archivo `package.json`:
+
+    ```bash
+    npm install
+    ```
+
+3.  **Configurar Variables de Entorno:**
+    Como se mencionó en la sección anterior, necesitas configurar tus credenciales de Firebase:
+
+    - Crea un archivo llamado `.env` en la raíz del proyecto (al mismo nivel que `package.json`).
+    - Añade tus claves de Firebase al archivo `.env` con el prefijo `VITE_`, como se muestra a continuación:
+      ```env
+      VITE_FIREBASE_API_KEY=TU_API_KEY
+      VITE_FIREBASE_AUTH_DOMAIN=TU_AUTH_DOMAIN
+      VITE_FIREBASE_PROJECT_ID=TU_PROJECT_ID
+      VITE_FIREBASE_STORAGE_BUCKET=TU_STORAGE_BUCKET
+      VITE_FIREBASE_MESSAGING_SENDER_ID=TU_MESSAGING_SENDER_ID
+      VITE_FIREBASE_APP_ID=TU_APP_ID
+      ```
+    - Reemplaza `TU_API_KEY`, `TU_AUTH_DOMAIN`, etc., con tus credenciales reales obtenidas de la Consola de Firebase.
+    - Asegúrate de que el archivo `.env` esté listado en tu `.gitignore` para no subirlo al repositorio.
+
+4.  **Ejecutar el Proyecto en Modo Desarrollo:**
+    Una vez instaladas las dependencias y configuradas las variables de entorno, puedes iniciar el servidor de desarrollo de Vite con el siguiente comando:
+    ```bash
+    npm run dev
+    ```
+    Esto iniciará la aplicación, generalmente en `http://localhost:5173` (Vite te indicará la URL en la consola). La aplicación se recargará automáticamente cuando hagas cambios en los archivos fuente.
